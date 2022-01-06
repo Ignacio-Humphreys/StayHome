@@ -1,3 +1,5 @@
+//1. Construcción básica de objetos
+
 class Productos{
     constructor(id, tipo, nombre, precio, extra, img, alt){
         this.id = id;
@@ -64,7 +66,7 @@ arrayProductos.push(new Productos(30, "Pulseras", "Pulsera con minimedalla", 800
 arrayProductos.push(new Productos(31, "Pulseras", "Pulseras esclavas abiertas", 1100, "", "media/pulsera_esclava.png", "Pulsera Tipo `Esclava`"))
 
 
-
+//2. Lógica carrito
 let cardProd = document.getElementById("landingCards")
 let eliminarCarrito = document.getElementById("eliminarCarrito")
 let carrito;
@@ -96,9 +98,57 @@ arrayProductos.filter(prodDisponible => prodDisponible.id <= 12).forEach(prodDis
         
         })
 
-function agregarAlCarrito(idSeleccionado){
+function agregarAlCarrito(idSeleccionado){    
     let agregarProducto = arrayProductos.find(prodElegido => prodElegido.id == idSeleccionado)
     carrito.push(agregarProducto)
+   mostrarCarrito(agregarProducto)
     localStorage.setItem('carrito', JSON.stringify(carrito))
 
 }
+function mostrarCarrito(agregarProducto){
+    let divCarrito = document.getElementById('contenedor-carrito')
+    divCarrito.innerHTML += `<div class="productoEnCarrito">
+                                <p class="idCarrito">${agregarProducto.id}</p>
+                                <img class="imgCarrito" src="${agregarProducto.img}">
+                                <p class="nombreCarrito">${agregarProducto.nombre}</p>
+                                <p class="precioCarrito">Precio:$${agregarProducto.precio}</p>
+                                <button class="boton-eliminar" id='eliminar${agregarProducto.id}'><i class="fas fa-trash-alt"></i></button>
+                            </div>`
+
+    let btnEliminarProducto = document.getElementById(`eliminar${agregarProducto.id}`)
+    btnEliminarProducto.addEventListener('click', () => {
+    btnEliminarProducto.parentElement.remove()
+    carrito = carrito.filter(borrarProd => borrarProd.id != agregarProducto.id)
+        Toastify({
+            text: "Producto Eliminado",
+            className: "info",
+            style: {
+            background: "#d73b3e",
+            }
+        }).showToast();
+
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+})
+
+}
+
+if('carrito' in localStorage && JSON.parse(localStorage.getItem('carrito')).length > 0){
+    var carritoActual = JSON.parse(localStorage.getItem('carrito'))
+    let carritoModal = document.getElementById("contenedor-carrito")
+}
+
+//Eliminar el carrito entero desde el modal
+document.getElementById("eliminarCarrito").addEventListener('click', () =>{
+    carrito.splice(0, carrito.length)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    document.getElementById("contenedor-carrito").innerHTML = ""
+
+    Toastify({
+        text: "Carrito eliminado correctamente",
+        className: "info",
+        style: {
+        background: "#d73b3e",
+        }
+      }).showToast();
+})
+
