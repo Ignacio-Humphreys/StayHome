@@ -1,11 +1,48 @@
+.landingCarousel{
+padding-bottom: 2%;
+height: 86.5vh !important;
+    #carruselMain{
+        height: 100%;
+        .carousel-inner{
+            height: 100% !important;
+            .carousel-item{
+                height: inherit;
+                .w-100{
+                    height: inherit;
+                }
+            }                
+        }
+    }
+}
+.productosLanding{
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 1%;
+}
 #landingCards{
     justify-content: center;
+    padding-bottom: 2%;
+    width: 100%;
     .row{
         justify-content: center;
         .card{
+            background-color: inherit !important;
+            border-color: lightgrey;
             img{
                 width: 100%;
                 height: 30vh;
+            }
+            .card-title{
+                font-size: 1.1rem;
+            }
+            .card-text{
+                font-size: 0.9rem;
+            }
+            .extra-text{
+                font-size: 0.8rem;
+            }
+            .btnAgregar{
+                align-items: flex-end;
             }
         }
     }

@@ -3,13 +3,103 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+.oscuro{
+    background-color: rgb(21, 21, 21) !important;
+    color: whitesmoke !important;
+    transition: background-color 500ms ease, color 500ms ease;
+}
+.oscuroA{
+    color: whitesmoke !important;
+    text-decoration: none;
+}
+.oscuroFooter{
+    background-color: rgb(98, 69, 157);
+}
+
 header{
+    box-shadow: lightgrey 2px;
+    box-shadow: 1px 1px grey;
     .navbar-collapse{
         justify-content: flex-end;
         padding-right: 0.5%;
         .navbar-nav{
             padding: 1%;
+            .productoEnCarrito{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2px;
+                border-bottom: 1px solid lightgrey;
+                .idCarrito{
+                    display: none;
+                }
+                .imgCarrito{
+                    height: 50px;
+                    width: 50px;
+                }
+                .nombreCarrito{
+                    margin-top: 3%;
+                    font-weight: 500;
+                }
+                .precioCarrito{
+                    margin-top: 3%;
+                    font-weight: bold;
+                }
+                .boton-eliminar:hover{
+                    color: red;
+                    cursor: pointer;
+                    transition: color 200ms ease;
+                }
+            }
+            #precioTotal{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 1.5rem;
+            }
         }
+    }
+}
+#switchMode{
+    position: fixed;
+    width: 30px;
+	height: 30px;
+	bottom: 90px;
+	left: 20px;
+    #lightModeBtn{
+        border-radius: 50%;
+        z-index: 100;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    #darkModeBtn{
+        border-radius: 50%;
+        z-index: 100;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+#whatsappRedirect{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:65px;
+	right:35px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+    .fa-whatsapp{
+        margin-top: 14px;
+        margin-left: 2px;
+    }
+    &:hover{
+        box-shadow: 2px 2px grey;
+        cursor: pointer;
     }
 }
 footer {
@@ -30,6 +120,7 @@ footer {
         }
         a {
             color: inherit;
+            text-decoration: none;
         }
         .instaFollow {
             display: flex;
