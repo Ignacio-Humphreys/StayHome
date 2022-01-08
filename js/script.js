@@ -55,7 +55,7 @@ $.getJSON('stock.json', function(data){
                 style: {
                 background: "mediumpurple",
                 }
-              }).fadeInToast();
+              }).showToast();
         })  
         
         })
@@ -88,7 +88,7 @@ function agregarAlCarrito(idSeleccionado){
             style: {
             background: "#d73b3e",
             }
-        }).fadeInToast();
+        }).showToast();
     
         localStorage.setItem('carrito', JSON.stringify(carrito))
     })
@@ -108,7 +108,7 @@ function agregarAlCarrito(idSeleccionado){
             style: {
             background: "#d73b3e",
             }
-          }).fadeInToast();
+          }).showToast();
         })
 
 
