@@ -130,6 +130,11 @@ footer {
   font-style: italic;
   padding-bottom: 1%; }
 
+#tipoProd {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  text-align: center; }
+
 #landingCards {
   justify-content: center;
   padding-bottom: 2%;
