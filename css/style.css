@@ -7,6 +7,8 @@ html {
   background-color: #151515 !important;
   color: whitesmoke !important;
   transition: background-color 500ms ease, color 500ms ease; }
+  .oscuro .modal-content {
+    color: black !important; }
 
 .oscuroA {
   color: whitesmoke !important;
@@ -37,6 +39,8 @@ header {
         header .navbar-collapse .navbar-nav .productoEnCarrito .nombreCarrito {
           margin-top: 3%;
           font-weight: 500; }
+        header .navbar-collapse .navbar-nav .productoEnCarrito .cantidadCarrito {
+          margin-top: 3%; }
         header .navbar-collapse .navbar-nav .productoEnCarrito .precioCarrito {
           margin-top: 3%;
           font-weight: bold; }
@@ -81,7 +85,8 @@ header {
   z-index: 100; }
   #whatsappRedirect .fa-whatsapp {
     margin-top: 14px;
-    margin-left: 2px; }
+    margin-left: 2px;
+    color: white !important; }
   #whatsappRedirect:hover {
     box-shadow: 2px 2px grey;
     cursor: pointer; }

@@ -1,7 +1,7 @@
 //1. Construcción básica de objetos
 
 class Productos{
-    constructor(id, tipo, nombre, precio, extra, img, alt){
+    constructor(id, tipo, nombre, precio, extra, img, alt, cantidad){
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
@@ -9,6 +9,7 @@ class Productos{
         this.extra = extra;
         this.img = img;
         this.alt = alt;
+        this.cantidad = cantidad;
     }
 }
 
@@ -16,22 +17,17 @@ let arrayProductos = []
 
 
 //2. Lógica carrito
-let cardProd = document.getElementById("landingCards")
-let eliminarCarrito = document.getElementById("eliminarCarrito")
-let sumaPrecio = document.getElementById("sumaPrecio")
+const cardProd = document.getElementById("landingCards")
+const eliminarCarrito = document.getElementById("eliminarCarrito")
+const sumaPrecio = document.getElementById("sumaPrecio")
 const filtro = document.getElementById('tipoProd')
 //let carrito;
 let carrito = []
 
-/*if(localStorage.getItem('carrito')){
-    carrito = JSON.parse(localStorage.getItem('carrito'))
-}else{
-    carrito = []
-}*/
 if("carrito" in localStorage && JSON.parse(localStorage.getItem('carrito')).length > 0){
     let carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
     for(const p of carritoGuardado){
-        carrito.push(new Productos(p.id, p.tipo, p.nombre, p.precio, p.extra, p.img, p.alt))
+        carrito.push(new Productos(p.id, p.tipo, p.nombre, p.precio, p.extra, p.img, p.alt, p.cantidad))
     }
 
     for(const prodSeleccionado of carrito){
@@ -39,6 +35,7 @@ if("carrito" in localStorage && JSON.parse(localStorage.getItem('carrito')).leng
         <p class="idCarrito">${prodSeleccionado.id}</p>
         <img class="imgCarrito" src="${prodSeleccionado.img}">
         <p class="nombreCarrito">${prodSeleccionado.nombre}</p>
+        <p class="cantidadCarrito">Cantidad: ${prodSeleccionado.cantidad}</p>
         <p class="precioCarrito">Precio: $${prodSeleccionado.precio}</p>
         <i class="far fa-trash-alt boton-eliminar" id='eliminar${prodSeleccionado.id}'></i>
         </div>`)
@@ -54,9 +51,10 @@ if("carrito" in localStorage && JSON.parse(localStorage.getItem('carrito')).leng
                     background: "#d73b3e",
                 }
             }).showToast();
-            
+            actualizarPrecio()
             localStorage.setItem('carrito', JSON.stringify(carrito))
         })
+        actualizarPrecio()
     }
 }
 
@@ -65,16 +63,17 @@ $.getJSON('stock.json', function(data){
     data.forEach(producto => arrayProductos.push(producto))
     mostrarProductos(arrayProductos)
 })
-    
-    filtro.addEventListener('change', () =>{
-    if(filtro.value == 'todos'){
-        mostrarProductos(arrayProductos)
-        console.log(arrayProductos);
-    }else{
-        mostrarProductos(arrayProductos.filter(producto => producto.tipo == filtro.value))
-        console.log(arrayProductos.filter(producto => producto.tipo == filtro.value))
+if(filtro){
+        filtro.addEventListener('change', () =>{
+        if(filtro.value == 'todos'){
+            mostrarProductos(arrayProductos)
+            console.log(arrayProductos);
+        }else{
+            mostrarProductos(arrayProductos.filter(producto => producto.tipo == filtro.value))
+            console.log(arrayProductos.filter(producto => producto.tipo == filtro.value))
+        }
+        })
     }
-})
 
 function mostrarProductos(array){
     $('#landingCards').empty()
@@ -106,7 +105,6 @@ function mostrarProductos(array){
                 }
             }).showToast();
         })  
-        
     })
 }
     
@@ -117,17 +115,22 @@ function agregarAlCarrito(idSeleccionado){
     carrito.push(agregarProducto)
     mostrarCarrito(agregarProducto)
     localStorage.setItem('carrito', JSON.stringify(carrito))
-    
+    actualizarPrecio()
     }
     function mostrarCarrito(agregarProducto){
     let divCarrito = document.getElementById('contenedor-carrito')
-    divCarrito.innerHTML += `<div class="productoEnCarrito">
+    let divProd = document.createElement('div')
+    divProd.classList.add('prodEnCarrito')
+    divProd.innerHTML += `<div class="productoEnCarrito">
                                 <p class="idCarrito">${agregarProducto.id}</p>
                                 <img class="imgCarrito" src="${agregarProducto.img}">
                                 <p class="nombreCarrito">${agregarProducto.nombre}</p>
+                                <p class="cantidadCarrito">Cantidad: ${agregarProducto.cantidad}</p>
                                 <p class="precioCarrito">Precio: $${agregarProducto.precio}</p>
                                 <i class="far fa-trash-alt boton-eliminar" id='eliminar${agregarProducto.id}'></i>
                             </div>`
+
+    divCarrito.appendChild(divProd)
     
     let btnEliminarProducto = document.getElementById(`eliminar${agregarProducto.id}`)
     btnEliminarProducto.addEventListener('click', () => {
@@ -140,14 +143,34 @@ function agregarAlCarrito(idSeleccionado){
             background: "#d73b3e",
             }
         }).showToast();
-    
+        actualizarPrecio()
         localStorage.setItem('carrito', JSON.stringify(carrito))
     })
     
     }
 
-        
-    //Eliminar el carrito entero desde el modal
+function actualizarPrecio(){
+    sumaPrecio.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+}
+
+//Finalizar la compra
+$('#comprarCarrito').click(()=>{
+    $.post("https://jsonplaceholder.typicode.com/posts",JSON.stringify(carrito),function(prodComprado,status) {
+        if(status){
+            if(carrito.length != 0){
+                document.getElementById("contenedor-carrito").innerHTML = "<h5>Su pedido ha sido tomado correctamente</h5>"
+                carrito = []
+                localStorage.setItem('carrito', JSON.stringify(carrito))
+                actualizarPrecio()
+            }else{
+                document.getElementById("contenedor-carrito").innerHTML = "<h5>Por favor, seleccione un producto para comprar</h5>"
+            }
+        }
+})
+})
+
+
+    //Eliminar el carrito entero desde el modal - Debugger
     document.getElementById("eliminarCarrito").addEventListener('click', () =>{
         carrito.splice(0, carrito.length)
         localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -160,6 +183,7 @@ function agregarAlCarrito(idSeleccionado){
             background: "#d73b3e",
             }
           }).showToast();
+          actualizarPrecio()
         })
 
 

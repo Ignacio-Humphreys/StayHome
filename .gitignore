@@ -2,3 +2,4 @@
 *.xlsx
 *.fig
 /node_modules/
+/desuso/

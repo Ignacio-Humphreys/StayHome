@@ -7,6 +7,9 @@ html {
     background-color: rgb(21, 21, 21) !important;
     color: whitesmoke !important;
     transition: background-color 500ms ease, color 500ms ease;
+    .modal-content{
+        color: black !important;
+    }
 }
 .oscuroA{
     color: whitesmoke !important;
@@ -40,6 +43,9 @@ header{
                 .nombreCarrito{
                     margin-top: 3%;
                     font-weight: 500;
+                }
+                .cantidadCarrito{
+                    margin-top: 3%;
                 }
                 .precioCarrito{
                     margin-top: 3%;
@@ -93,15 +99,15 @@ header{
     font-size:30px;
 	box-shadow: 2px 2px 3px #999;
     z-index:100;
-    
-    .fa-whatsapp{
-        margin-top: 14px;
-        margin-left: 2px;
-    }
-    &:hover{
-        box-shadow: 2px 2px grey;
-        cursor: pointer;
-    }
+        .fa-whatsapp{
+            margin-top: 14px;
+            margin-left: 2px;
+            color: white !important;
+        }
+        &:hover{
+            box-shadow: 2px 2px grey;
+            cursor: pointer;
+        }
 }
 footer {
     background-color: mediumpurple;

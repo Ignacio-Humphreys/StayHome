@@ -6,7 +6,8 @@
         "precio": 700,
         "extra": "",
         "img": "media/bombilla_personalizada-1.png",
-        "alt": "Bombilla Grabada Personalizada"
+        "alt": "Bombilla Grabada Personalizada",
+        "cantidad": 1
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "precio": 1600,
         "extra": "",
         "img": "media/barrita_rose-1.png",
-        "alt": "Barrita Rosé o Dorada Grabada"
+        "alt": "Barrita Rosé o Dorada Grabada",
+        "cantidad": 1
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "precio": 800,
         "extra": "",
         "img": "media/chapa_mascota.png",
-        "alt": "Chapa Para Mascotas Grabada"
+        "alt": "Chapa Para Mascotas Grabada",
+        "cantidad": 1
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "precio": 900,
         "extra": "",
         "img": "media/chapa_mascota_calada.png",
-        "alt": "Chapa Para Mascotas Calada"
+        "alt": "Chapa Para Mascotas Calada",
+        "cantidad": 1
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "precio": 700,
         "extra": "Con grabado al dorso = $900",
         "img": "media/minimedalla_mascota.png",
-        "alt": "Minimedallas Para Mascotas"
+        "alt": "Minimedallas Para Mascotas",
+        "cantidad": 1
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "precio": 800,
         "extra": "",
         "img": "media/llavero_body-1.png",
-        "alt": "Llavero Bodys de Bebé"
+        "alt": "Llavero Bodys de Bebé",
+        "cantidad": 1
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "precio": 1000,
         "extra": "Te grabamos el código de la canción de Spotify que quieras!",
         "img": "media/cadena_spotify.png",
-        "alt": "Llavero Código Spotify"
+        "alt": "Llavero Código Spotify",
+        "cantidad": 1
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "precio": 800,
         "extra": "Solo frases de catálogo, consultar precio por frases personalizadas",
         "img": "media/llavero_estrella.png",
-        "alt": "Llavero Con Forma de Estrella"
+        "alt": "Llavero Con Forma de Estrella",
+        "cantidad": 1
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "precio": 1800,
         "extra": "",
         "img": "media/rompecabezas-1.png",
-        "alt": "Llavero en Conjunto Tipo Rompecabezas"
+        "alt": "Llavero en Conjunto Tipo Rompecabezas",
+        "cantidad": 1
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@
         "precio": 1000,
         "extra": "",
         "img": "media/llavero_cuadrado_corazon-1.png",
-        "alt": "Llavero Cuadrado con Minicorazón"
+        "alt": "Llavero Cuadrado con Minicorazón",
+        "cantidad": 1
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@
         "precio": 1800,
         "extra": "",
         "img": "media/conjunto_corazon_calado.png",
-        "alt": "Conjunto de Llaveros con Corazón Calado"
+        "alt": "Conjunto de Llaveros con Corazón Calado",
+        "cantidad": 1
     },
     {
         "id": 32,
@@ -105,7 +116,8 @@
         "precio": 800,
         "extra": "",
         "img": "media/llavero_cuadrado-1.png",
-        "alt": "Llavero Cuadrado Grabado"
+        "alt": "Llavero Cuadrado Grabado",
+        "cantidad": 1
     },
     {
         "id": 12,
@@ -114,7 +126,8 @@
         "precio": 1100,
         "extra": "",
         "img": "media/barrita_con_cadena-1.png",
-        "alt": "Barrita con Cadena"
+        "alt": "Barrita con Cadena",
+        "cantidad": 1
     },
     {
         "id": 13,
@@ -123,7 +136,8 @@
         "precio": 2500,
         "extra": "",
         "img": "media/medalla_calada_cadena.png",
-        "alt": "Medalla Calada con Cadena"
+        "alt": "Medalla Calada con Cadena",
+        "cantidad": 1
     },
     {
         "id": 14,
@@ -132,7 +146,8 @@
         "precio": 1500,
         "extra": "",
         "img": "media/nombres_acero-1.png",
-        "alt": "Nombres Tallados en Acero Quirúrjico"
+        "alt": "Nombres Tallados en Acero Quirúrjico",
+        "cantidad": 1
     },
     {
         "id": 15,
@@ -141,7 +156,8 @@
         "precio": 1800,
         "extra": "",
         "img": "media/nombres_dorado.png",
-        "alt": "Nombres Tallados en Acero Dorado"
+        "alt": "Nombres Tallados en Acero Dorado",
+        "cantidad": 1
     },
     {
         "id": 16,
@@ -150,7 +166,8 @@
         "precio": 1200,
         "extra": "",
         "img": "media/corazon_2.5cm.png",
-        "alt": "Dije de Corazón de 2,5 Centímetros"
+        "alt": "Dije de Corazón de 2,5 Centímetros",
+        "cantidad": 1
     },
     {
         "id": 17,
@@ -159,7 +176,8 @@
         "precio": 1000,
         "extra": "",
         "img": "media/corazon_2cm.png",
-        "alt": "Dije de Corazón de 2 Centímetros"
+        "alt": "Dije de Corazón de 2 Centímetros",
+        "cantidad": 1
     },
     {
         "id": 18,
@@ -168,7 +186,8 @@
         "precio": 1900,
         "extra": "",
         "img": "media/constelacion.png",
-        "alt": "Cadena con Constelación"
+        "alt": "Cadena con Constelación",
+        "cantidad": 1
     },
     {
         "id": 19,
@@ -177,7 +196,8 @@
         "precio": 1100,
         "extra": "",
         "img": "media/medalla_3cm-1.png",
-        "alt": "Cadena con Medalla Grabada de 3 Centímetros"
+        "alt": "Cadena con Medalla Grabada de 3 Centímetros",
+        "cantidad": 1
     },
     {
         "id": 20,
@@ -186,7 +206,8 @@
         "precio": 3000,
         "extra": "",
         "img": "media/infinito.png",
-        "alt": "Símbolo Infinito con Dos Nombres Tallados en Acero Quirúrjico"
+        "alt": "Símbolo Infinito con Dos Nombres Tallados en Acero Quirúrjico",
+        "cantidad": 1
     },
     {
         "id": 21,
@@ -195,7 +216,8 @@
         "precio": 1200,
         "extra": "",
         "img": "media/fotomedalla.png",
-        "alt": "Cadena con Fotomedalla"
+        "alt": "Cadena con Fotomedalla",
+        "cantidad": 1
     },
     {
         "id": 22,
@@ -204,7 +226,8 @@
         "precio": 1800,
         "extra": "",
         "img": "media/rompecabezas-2.png",
-        "alt": "Conjunto de Cadenas Rompecabeza"
+        "alt": "Conjunto de Cadenas Rompecabeza",
+        "cantidad": 1
     },
     {
         "id": 23,
@@ -213,7 +236,8 @@
         "precio": 1500,
         "extra": "",
         "img": "media/barrita_oro_duble.png",
-        "alt": "Barrita Grabada con Corazón de Oro Dublé"
+        "alt": "Barrita Grabada con Corazón de Oro Dublé",
+        "cantidad": 1
     },
     {
         "id": 24,
@@ -222,7 +246,8 @@
         "precio": 350,
         "extra": "Desde $350. Cada letra adicional = $250",
         "img": "media/letras_con_cadena.png",
-        "alt": "Cadena Con Letras Varias"
+        "alt": "Cadena Con Letras Varias",
+        "cantidad": 1
     },
     {
         "id": 25,
@@ -231,7 +256,8 @@
         "precio": 1000,
         "extra": "Cada dona adicional = $900",
         "img": "media/donas_rusas.png",
-        "alt": "Cadena Con Donas Rusas"
+        "alt": "Cadena Con Donas Rusas",
+        "cantidad": 1
     },
     {
         "id": 26,
@@ -240,7 +266,8 @@
         "precio": 1200,
         "extra": "",
         "img": "media/maxiletras-1.png",
-        "alt": "Cadena Con Maxiletra"
+        "alt": "Cadena Con Maxiletra",
+        "cantidad": 1
     },
     {
         "id": 27,
@@ -249,7 +276,8 @@
         "precio": 2300,
         "extra": "",
         "img": "media/medallon_triple.png",
-        "alt": "Cadena Con Medallón Triple"
+        "alt": "Cadena Con Medallón Triple",
+        "cantidad": 1
     },
     {
         "id": 28,
@@ -258,7 +286,8 @@
         "precio": 1100,
         "extra": "",
         "img": "media/pulsera_barrita-1.png",
-        "alt": "Pulsera Con Barrita Grabada"
+        "alt": "Pulsera Con Barrita Grabada",
+        "cantidad": 1
     },
     {
         "id": 29,
@@ -267,7 +296,8 @@
         "precio": 1200,
         "extra": "",
         "img": "media/pulsera_grumet.png",
-        "alt": "Pulsera hombre c/ cadena grumet"
+        "alt": "Pulsera hombre c/ cadena grumet",
+        "cantidad": 1
     },
     {
         "id": 30,
@@ -276,7 +306,8 @@
         "precio": 800,
         "extra": "Cada medalla adicional tiene un valor de $400",
         "img": "media/minimedalla-1.png",
-        "alt": "Pulsera Con Múltiples Minimedallas"
+        "alt": "Pulsera Con Múltiples Minimedallas",
+        "cantidad": 1
     },
     {
         "id": 31,
@@ -285,6 +316,7 @@
         "precio": 1100,
         "extra": "",
         "img": "media/pulsera_esclava.png",
-        "alt": "Pulsera Tipo `Esclava`"
+        "alt": "Pulsera Tipo `Esclava`",
+        "cantidad": 1
     }
 ]
