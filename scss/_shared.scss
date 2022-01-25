@@ -27,50 +27,58 @@ header{
         padding-right: 0.5%;
         .navbar-nav{
             padding: 1%;
-            .productoEnCarrito{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 2px;
-                border-bottom: 1px solid lightgrey;
-                .idCarrito{
-                    display: none;
+            .modal-content{
+                width: 120% !important;
+                left: -7% !important;    
+                .postCompra{
+                    text-align: center;
+                }        
+                .productoEnCarrito{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2px;
+                    border-bottom: 1px solid lightgrey;
+                    .idCarrito{
+                        display: none;
+                    }
+                    .imgCarrito{
+                        height: 50px;
+                        width: 50px;
+                    }
+                    .nombreCarrito{
+                        margin-top: 3%;
+                        font-weight: 500;
+                        text-align: center;
+                        width: 200px;
+                        max-width: 200px;
+                    }
+                    .cantidadCarrito{
+                        width: 7%;
+                    }
+                    .precioCarrito{
+                        margin-top: 3%;
+                        font-weight: bold;
+                    }
+                    .boton-eliminar:hover{
+                        color: red;
+                        cursor: pointer;
+                        transition: color 200ms ease;
+                    }
                 }
-                .imgCarrito{
-                    height: 50px;
-                    width: 50px;
+                #precioTotal{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-right: 1.5rem;
                 }
-                .nombreCarrito{
-                    margin-top: 3%;
-                    font-weight: 500;
-                }
-                .cantidadCarrito{
-                    margin-top: 3%;
-                }
-                .precioCarrito{
-                    margin-top: 3%;
-                    font-weight: bold;
-                }
-                .boton-eliminar:hover{
-                    color: red;
-                    cursor: pointer;
-                    transition: color 200ms ease;
-                }
-            }
-            #precioTotal{
-                display: flex;
-                justify-content: flex-end;
-                margin-right: 1.5rem;
             }
         }
     }
 }
 #switchMode{
-    position: fixed;
+    margin-top: 30%;
     width: 30px;
-	height: 30px;
-	bottom: 90px;
-	left: 20px;
+    height: 30px;
     #lightModeBtn{
         border-radius: 50%;
         z-index: 100;

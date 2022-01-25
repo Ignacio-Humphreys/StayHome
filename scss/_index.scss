@@ -1,17 +1,44 @@
-.landingCarousel{
+.landingImg{
+position: relative;
+display: block;
 padding-bottom: 2%;
-height: 86.5vh !important;
-    #carruselMain{
-        height: 100%;
-        .carousel-inner{
-            height: 100% !important;
-            .carousel-item{
-                height: inherit;
-                .w-100{
-                    height: inherit;
-                }
-            }                
+height: 86.5vh;
+width: 100%;
+    &:hover{
+        .overlay{
+            display: block;
+            transition: width 900ms;
+            width: 100%;
+            p{
+                display: block;
+                color: whitesmoke;
+                transition: color 900ms;
+            }
         }
+    }
+    .overlay{
+        transition: width 900ms;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 95.5%;
+        background-color: rgba(128,128,128,0.75);
+        p{
+            display: none;
+            color: rgba(128,128,128,0.75);
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 19%;
+            font-style: italic;
+            font-family: 'Sedgwick Ave', cursive;
+            transition: color 900ms;
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
     }
 }
 .productosLanding{
